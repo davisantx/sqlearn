@@ -1,0 +1,14 @@
+{
+  "name": "sqlearn",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "type": "module",
+  "dependencies": {
+    "@opentui/core": "^0.1.45"
+  }
+}
