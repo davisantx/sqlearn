@@ -1,0 +1,22 @@
+import { InputRenderable, InputRenderableEvents } from "@opentui/core";
+import { renderer, style } from "../shared";
+import { createQuery } from "../sql";
+import { resultQueryTextBox, sqlTextBox } from "./texts";
+import { screenTexts } from "./shared";
+
+export const queryInput = new InputRenderable(renderer, {
+  id: 'query-input',
+  width: '100%',
+  height: '30%',
+  paddingLeft: 2,
+  backgroundColor: style.bgColor,
+  placeholder: 'Digite aqui...',
+});
+
+queryInput.on(InputRenderableEvents.ENTER, (value) => {
+  createQuery(value);
+  resultQueryTextBox.content = screenTexts.resultQuery;
+  sqlTextBox.content = screenTexts.sqlCode;
+});
+
+queryInput.focus();
