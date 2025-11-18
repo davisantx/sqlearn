@@ -2,7 +2,7 @@ import { InputRenderable, InputRenderableEvents } from "@opentui/core";
 import { renderer, style } from "../shared";
 import { createQuery } from "../sql";
 import { resultQueryTextBox, sqlTextBox } from "./texts";
-import { screenTexts } from "./shared";
+import { screenTexts } from "../shared";
 
 export const queryInput = new InputRenderable(renderer, {
   id: 'query-input',

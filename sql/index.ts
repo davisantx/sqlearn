@@ -1,5 +1,5 @@
 import { Database } from 'bun:sqlite';
-import { screenTexts } from '../components/shared';
+import { screenTexts } from '../shared';
 
 const db = new Database('db.sqlite', { strict: true });
 
