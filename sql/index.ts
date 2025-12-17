@@ -1,7 +1,7 @@
 import { Database } from 'bun:sqlite';
 import { screenTexts } from '../shared';
 
-const db = new Database('db.sqlite', { strict: true });
+const db = new Database('db.sqlite', { strict: true, create: true });
 
 const queries: string[] = [];
 
