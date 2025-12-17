@@ -1,5 +1,5 @@
-import { InputRenderable, InputRenderableEvents } from "@opentui/core";
-import { renderer, style } from "../shared";
+import { InputRenderable, InputRenderableEvents, RGBA } from "@opentui/core";
+import { renderer } from "../shared";
 import { createQuery } from "../sql";
 import { resultQueryTextBox, sqlTextBox } from "./texts";
 import { screenTexts } from "../shared";
@@ -9,7 +9,7 @@ export const queryInput = new InputRenderable(renderer, {
   width: '100%',
   height: '30%',
   paddingLeft: 2,
-  backgroundColor: style.bgColor,
+  backgroundColor: RGBA.fromHex("#00000000"),
   placeholder: 'Digite aqui...',
 });
 
